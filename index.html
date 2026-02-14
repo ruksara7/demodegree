@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>लाइब्रेरी के बारे में - जयनाथ पी जी कॉलेज</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .header { background: #D32F2F; color: white; padding: 1rem; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .header .logo { font-size: 1.5rem; font-weight: bold; }
+        .menu { list-style: none; display: flex; gap: 2rem; }
+        .menu a { color: white; text-decoration: none; padding: 0.5rem 1rem; }
+        .active { background: #FBC02D; color: #D32F2F !important; border-radius: 4px; }
+        .container { max-width: 1200px; margin: 120px auto 0; padding: 2rem; }
+        .hero { text-align: center; padding: 3rem 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px; margin-bottom: 3rem; }
+        .section { margin-bottom: 3rem; }
+        .section h2 { color: #D32F2F; font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 3px solid #FBC02D; padding-bottom: 0.5rem; }
+        .founder { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: center; margin: 2rem 0; }
+        .founder img { width: 200px; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+        .timeline { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .timeline-item { position: relative; padding-left: 2rem; margin-bottom: 2rem; }
+        .timeline-item::before { content: ''; position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #FBC02D; border-radius: 50%; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; background: #FBC02D; padding: 2rem; border-radius: 12px; text-align: center; }
+        .stat { font-size: 2.5rem; font-weight: bold; color: #D32F2F; }
+        @media (max-width: 768px) { .founder { grid-template-columns: 1fr; } .menu { display: none; } }
+    </style>
+</head>
+<body>
+    <!-- HEADER (Same as library/index.html) -->
+    <nav class="header">
+        <div class="logo">जयनाथ पी जी कॉलेज, गोरखपुर</div>
+        <ul class="menu">
+            <li><a href="/administration/">प्रशासन</a></li>
+            <li><a href="/academics/">शैक्षणिक</a></li>
+            <li><a href="/students/">छात्र</a></li>
+            <li class="active"><a href="/library/">लाइब्रेरी</a></li>
+            <li><a href="/gallery/">गैलरी</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1 style="font-size: 2.8rem; color: #D32F2F;">कॉलेज सेंट्रल लाइब्रेरी</h1>
+            <p style="font-size: 1.3rem; color: #666; margin-top: 1rem;">स्थापना: 25 अगस्त 1969 | एस्टा. 57 वर्ष</p>
+        </div>
+
+        <!-- Founder Section -->
+        <div class="section">
+            <h2>संस्थापक: ब्रह्मलीन दिग्विजय नाथ जी महाराज</h2>
+            <div class="founder">
+                <div>
+                    <img src="assets/images/digvijay-nath-maharaj.jpg" alt="दिग्विजय नाथ जी महाराज">
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">श्री गुरु गोरखनाथ मंदिर के पूर्व महंत</p>
+                </div>
+                <div>
+                    <p><strong>ब्रह्मलीन दिग्विजय नाथ जी महाराज</strong> गोरखनाथ मंदिर के पूर्व महंत थे। 1900 में मात्र 5 वर्ष की आयु में राजस्थान के राणा परिवार से गोरखपुर आए। उनके गुरु योगीराज गंभीर नाथ जी महाराज के सान्निध्य में उन्होंने मानव सेवा का पाठ सीखा।</p>
+                    <p>1932 में <strong>महाराणा प्रताप शिक्षा परिषद</strong> की स्थापना कर पूर्वांचल में शिक्षा क्रांति का सूत्रपात किया। 25 अगस्त 1969 को दिग्विजय नाथ स्नातकोत्तर महाविद्यालय की स्थापना की।</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Timeline -->
+        <div class="section">
+            <h2>इतिहास</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>1932 - शिक्षा परिषद की स्थापना</h3>
+                    <p>महाराणा प्रताप शिक्षा परिषद, गोरखपुर की स्थापना।</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1949-50 - महाराणा प्रताप डिग्री कॉलेज</h3>
+                    <p>गोरखपुर विश्वविद्यालय की स्थापना में योगदान।</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>25 अगस्त 1969 - डीएनपीजी कॉलेज</h3>
+                    <p>शिक्षा के शून्य को भरने हेतु स्थापना।</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>वर्तमान - योगी आदित्यनाथ जी के नेतृत्व में</h3>
+                    <p>उत्तर प्रदेश के माननीय मुख्यमंत्री श्री योगी आदित्यनाथ जी के प्रेरणा से संचालित।</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Library Services -->
+        <div class="section">
+            <h2>हमारी सेवाएँ</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="card" style="padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <h3>📚 पुस्तक उधार</h3>
+                    <p>25,000+ पुस्तकें, 15 दिन उधार अवधि</p>
+                </div>
+                <div class="card" style="padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <h3>💻 डिजिटल पहुँच</h3>
+                    <p>INFLIBNET, ई-जर्नल्स, ऑनलाइन संसाधन</p>
+                </div>
+                <div class="card" style="padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <h3>👩‍🏫 रिटायर्ड प्रिंसिपल्स का योगदान</h3>
+                    <p>पूर्व प्राचार्यो द्वारा दान पुस्तकें</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat">57</div><p>वर्षों का गौरवशाली इतिहास</p>
+            <div class="stat">25,000+</div><p>पुस्तक संग्रह</div>
+            <div class="stat">1932</div><p>शिक्षा परिषद स्थापना</p>
+        </div>
+    </div>
+</body>
+</html>
