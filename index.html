@@ -1,148 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDU University - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<title>College Name | Official Website</title>
-<meta name="description" content="Official website of College Name. Admissions, courses, faculty, facilities and notices.">
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
 
-<link rel="stylesheet" href="css/style.css">
-<script src="js/main.js" defer></script>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 90px;
+            padding: 2rem 0;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(30,60,114,0.9), rgba(42,82,152,0.9)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23e3f2fd" width="1200" height="600"/><circle fill="%234294d6" opacity="0.3" cx="200" cy="200" r="100"/><circle fill="%232a5298" opacity="0.4" cx="1000" cy="400" r="150"/></svg>');
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            margin-bottom: 3rem;
+            border-radius: 15px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255,215,0,0.4);
+        }
+
+        /* Content Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #ffd700;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            background: rgba(255,215,0,0.2);
+        }
+
+        /* Responsive */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: #1e3c72;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 2rem;
+                transition: 0.3s;
+            }
+
+            nav ul.active {
+                left: 0;
+            }
+
+            nav ul li {
+                margin: 1rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="logo">DDU<span>University</span></div>
+            <nav>
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#admissions">Admissions</a></li>
+                    <li><a href="#faculty">Faculty</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-    <div class="container header-flex">
-
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="College Logo">
-            <div class="logo-text">
-                <h1>College Name</h1>
-                <p>Affiliated to University Name</p>
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Welcome to DDU University</h1>
+                <p>Excellence in Education, Research & Innovation</p>
+                <a href="#courses" class="btn">Explore Programs</a>
             </div>
+        </section>
+
+        <section class="container">
+            <div class="grid">
+                <div class="card">
+                    <h3>Academic Excellence</h3>
+                    <p>World-class faculty and cutting-edge research facilities ensure you receive the highest quality education and training.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Modern Campus</h3>
+                    <p>State-of-the-art infrastructure with smart classrooms, advanced laboratories, and world-class sports facilities.</p>
+                    <a href="#" class="btn">View Campus</a>
+                </div>
+                <div class="card">
+                    <h3>Global Opportunities</h3>
+                    <p>International collaborations, exchange programs, and placement opportunities with top MNCs worldwide.</p>
+                    <a href="#" class="btn">Discover More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Admissions</a>
+                <a href="#">Academics</a>
+                <a href="#">Research</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>&copy; 2026 DDU University. All Rights Reserved.</p>
         </div>
+    </footer>
 
-        <button class="menu-toggle" id="menuToggle">☰</button>
-        <div class="menu-overlay" id="menuOverlay"></div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
 
-        <nav class="main-nav" id="mainNav">
-
-            <span class="menu-close" id="menuClose">✕</span>
-
-            <ul>
-
-                <li><a href="index.html">Home</a></li>
-
-                <li class="dropdown">
-                    <a href="#">About</a>
-                    <ul>
-                        <li><a href="about/founder.html">Founder</a></li>
-                        <li><a href="about/history.html">History</a></li>
-                        <li><a href="about/vision-mission.html">Vision & Mission</a></li>
-                        <li><a href="about/past-president.html">Past President</a></li>
-                        <li><a href="about/past-principal.html">Past Principal</a></li>
-                        <li><a href="about/retired-teachers.html">Retired Teachers</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Administration</a>
-                    <ul>
-                        <li><a href="administration/governing-body.html">Governing Body</a></li>
-                        <li><a href="administration/chairperson-message.html">Chairperson Message</a></li>
-                        <li><a href="administration/principal-message.html">Principal Message</a></li>
-                        <li><a href="administration/committees.html">Committees</a></li>
-                        <li><a href="administration/proctorial-board.html">Proctorial Board</a></li>
-                        <li><a href="administration/rules-and-regulations.html">Rules & Regulations</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Faculties</a>
-                    <ul>
-                        <li><a href="faculties/arts.html">Arts</a></li>
-                        <li><a href="faculties/science.html">Science</a></li>
-                        <li><a href="faculties/commerce.html">Commerce</a></li>
-                        <li><a href="faculties/bed.html">B.Ed</a></li>
-                        <li><a href="faculties/teaching-staff.html">Teaching Staff</a></li>
-                        <li><a href="faculties/non-teaching-staff.html">Non Teaching Staff</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#">Courses</a>
-                    <ul>
-                        <li><a href="courses/index.html">All Courses</a></li>
-                        <li><a href="courses/ug.html">UG</a></li>
-                        <li><a href="courses/pg.html">PG</a></li>
-                        <li><a href="courses/ba.html">B.A</a></li>
-                        <li><a href="courses/bsc.html">B.Sc</a></li>
-                        <li><a href="courses/bcom.html">B.Com</a></li>
-                        <li><a href="courses/ma.html">M.A</a></li>
-                        <li><a href="courses/msc.html">M.Sc</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="students/admission-procedure.html">Students</a></li>
-                <li><a href="facilities/index.html">Facilities</a></li>
-                <li><a href="gallery/photo-gallery.html">Gallery</a></li>
-                <li><a href="iqac/index.html">IQAC</a></li>
-                <li><a href="naac/ssr.html">NAAC</a></li>
-                <li><a href="notices/index.html">Notices</a></li>
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-        </nav>
-
-    </div>
-</header>
-
-
-<!-- ================= MAIN CONTENT ================= -->
-<main class="page-content">
-
-    <section class="hero">
-        <img src="assets/images/campus.jpg" alt="College Campus">
-        <div class="hero-text">
-            <h2>Welcome to College Name</h2>
-            <p>Providing quality higher education since 19XX</p>
-        </div>
-    </section>
-
-    <section class="home-section">
-        <h2>About the Institution</h2>
-        <p>
-            Short introduction about the college will appear here.
-            Replace this text only. Do not change layout.
-        </p>
-        <a class="btn" href="about/history.html">Read More</a>
-    </section>
-
-    <section class="home-section">
-        <h2>Courses Offered</h2>
-        <p>Brief summary of academic programs.</p>
-        <a class="btn" href="courses/index.html">View Courses</a>
-    </section>
-
-    <section class="home-section">
-        <h2>Latest Notices</h2>
-        <p>Important announcements displayed here.</p>
-        <a class="btn" href="notices/index.html">All Notices</a>
-    </section>
-
-</main>
-
-
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-    <div class="container">
-        <p>© 2026 College Name. All Rights Reserved.</p>
-        <p>Address • Phone • Email</p>
-    </div>
-</footer>
-
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
