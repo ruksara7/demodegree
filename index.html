@@ -1,75 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DDU University - Home</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="utf-8">
+  <title>Photo Gallery - My University</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">DDU<span>University</span></div>
-            <div class="hamburger">
-                <span></span><span></span><span></span>
-            </div>
-            <nav>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="index.html" class="nav-link">🏠 Home</a></li>
-                    
-                    <li>
-                        <a href="about/" class="nav-link nav-has-dropdown">👥 About</a>
-                        <ul class="nav-dropdown">
-                            <li><a href="about/history.html" class="nav-link">📜 History</a></li>
-                            <li><a href="about/vision.html" class="nav-link">🎯 Vision</a></li>
-                            <li><a href="about/founder.html" class="nav-link">👨 Founder</a></li>
-                            <li><a href="about/cofounder.html" class="nav-link">👨‍💼 Co-Founder</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        <a href="courses/" class="nav-link nav-has-dropdown">📚 Courses</a>
-                        <ul class="nav-dropdown">
-                            <li><a href="courses/ba.html" class="nav-link">🎓 BA</a></li>
-                            <li><a href="courses/mba.html" class="nav-link">💼 MBA</a></li>
-                            <li><a href="courses/btech.html" class="nav-link">⚙️ B.Tech</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        <a href="faculty/" class="nav-link nav-has-dropdown">👨‍🏫 Faculty</a>
-                        <ul class="nav-dropdown">
-                            <li><a href="faculty/teaching.html" class="nav-link">👨‍🎓 Teaching</a></li>
-                            <li><a href="faculty/nonteaching.html" class="nav-link">💼 Non-Teaching</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        <a href="facilities/" class="nav-link nav-has-dropdown">🏛️ Facilities</a>
-                        <ul class="nav-dropdown">
-                            <li><a href="facilities/library.html" class="nav-link">📚 Library</a></li>
-                            <li><a href="facilities/sports.html" class="nav-link">⚽ Sports</a></li>
-                            <li><a href="facilities/conference.html" class="nav-link">🎤 Conference Hall</a></li>
-                            <li><a href="facilities/playground.html" class="nav-link">🏟️ Playground</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li><a href="contact.html" class="nav-link">📞 Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Same topnav as index.html -->
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html" class="active">Photo Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+  </div>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Welcome to DDU University</h1>
-                <p>Varanasi's Premier Educational Institution</p>
-                <a href="courses/" class="btn">Explore All Programs</a>
-            </div>
-        </section>
-    </main>
+  <main>
+    <h1>Photo Gallery</h1>
+    <!-- Year selector for filtering -->
+    <label for="yearSelect">Select Year: </label>
+    <select id="yearSelect">
+      <option value="All">All</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <!-- Add more years as needed -->
+    </select>
 
-    <script src="../js/main.js"></script>
+    <!-- Gallery images -->
+    <div class="gallery">
+      <!-- Example figure; staff should copy this block for each photo, updating src and caption -->
+      <figure data-year="2025">
+        <img src="images/photos/2025/placement_cell.jpg" alt="Placement Cell Event">
+        <figcaption>Placement Cell 2025</figcaption>
+      </figure>
+      <figure data-year="2025">
+        <img src="images/photos/2025/sports_fest.jpg" alt="Annual Sports Festival">
+        <figcaption>Annual Sports Festival 2025</figcaption>
+      </figure>
+      <!-- Add more <figure> elements here, with correct data-year and image paths -->
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 My University. All rights reserved.</p>
+  </footer>
 </body>
 </html>
