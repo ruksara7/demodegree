@@ -3,129 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XYZ Degree College</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
 
+<title>College Name | Official Website</title>
+<meta name="description" content="Official website of College Name. Admissions, courses, faculty, facilities and notices.">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
 <body>
 
-<!-- Top Bar -->
-<div class="top-bar">
-    Managed by <strong>Anjuman Islamia Adara Trust</strong>
-</div>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+    <div class="container header-flex">
 
-<!-- Header -->
-<header>
-    <div class="logo">
-        <h1>XYZ Degree College</h1>
-        <p>Affiliated & Recognized Institution</p>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="College Logo">
+            <div class="logo-text">
+                <h1>College Name</h1>
+                <p>Affiliated to University Name</p>
+            </div>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <nav class="main-nav" id="mainNav">
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="#">About</a>
+                    <ul>
+                        <li><a href="about/founder.html">Founder</a></li>
+                        <li><a href="about/history.html">History</a></li>
+                        <li><a href="about/vision-mission.html">Vision & Mission</a></li>
+                        <li><a href="about/past-president.html">Past President</a></li>
+                        <li><a href="about/past-principal.html">Past Principal</a></li>
+                        <li><a href="about/retired-teachers.html">Retired Teachers</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Administration</a>
+                    <ul>
+                        <li><a href="administration/governing-body.html">Governing Body</a></li>
+                        <li><a href="administration/chairperson-message.html">Chairperson Message</a></li>
+                        <li><a href="administration/principal-message.html">Principal Message</a></li>
+                        <li><a href="administration/committees.html">Committees</a></li>
+                        <li><a href="administration/proctorial-board.html">Proctorial Board</a></li>
+                        <li><a href="administration/rules-and-regulations.html">Rules & Regulations</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Faculties</a>
+                    <ul>
+                        <li><a href="faculties/arts.html">Arts</a></li>
+                        <li><a href="faculties/science.html">Science</a></li>
+                        <li><a href="faculties/commerce.html">Commerce</a></li>
+                        <li><a href="faculties/bed.html">B.Ed</a></li>
+                        <li><a href="faculties/teaching-staff.html">Teaching Staff</a></li>
+                        <li><a href="faculties/non-teaching-staff.html">Non Teaching Staff</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Courses</a>
+                    <ul>
+                        <li><a href="courses/index.html">All Courses</a></li>
+                        <li><a href="courses/ug.html">UG</a></li>
+                        <li><a href="courses/pg.html">PG</a></li>
+                        <li><a href="courses/ba.html">B.A</a></li>
+                        <li><a href="courses/bsc.html">B.Sc</a></li>
+                        <li><a href="courses/bcom.html">B.Com</a></li>
+                        <li><a href="courses/ma.html">M.A</a></li>
+                        <li><a href="courses/msc.html">M.Sc</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="students/admission-procedure.html">Students</a></li>
+                <li><a href="facilities/index.html">Facilities</a></li>
+                <li><a href="gallery/photo-gallery.html">Gallery</a></li>
+                <li><a href="iqac/index.html">IQAC</a></li>
+                <li><a href="naac/ssr.html">NAAC</a></li>
+                <li><a href="notices/index.html">Notices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+
     </div>
-
-    <nav id="nav-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-
-            <li class="dropdown">
-                <a href="#">About</a>
-                <ul class="dropdown-menu">
-                    <li><a href="about/founder.html">Founder</a></li>
-                    <li><a href="about/history.html">History</a></li>
-                    <li><a href="about/vision-mission.html">Vision & Mission</a></li>
-                </ul>
-            </li>
-
-            <li><a href="faculties/arts.html">Faculties</a></li>
-            <li><a href="students/student-profile.html">Students</a></li>
-            <li><a href="courses/index.html">Courses</a></li>
-            <li><a href="facilities/index.html">Facilities</a></li>
-            <li><a href="gallery/photo-gallery.html">Gallery</a></li>
-            <li><a href="iqac/index.html">IQAC</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-    <h2>Welcome to XYZ Degree College</h2>
-    <p>Empowering Education for a Better Tomorrow</p>
-</section>
 
-<!-- About Preview -->
-<section class="section">
-    <h2>About the College</h2>
-    <p>
-        XYZ Degree College is committed to academic excellence and holistic development.
-    </p>
-    <a href="about/history.html" class="btn">Read More</a>
-</section>
+<!-- ================= MAIN CONTENT (CHANGE ONLY THIS IN OTHER PAGES) ================= -->
+<main class="page-content">
 
-<!-- Courses Preview -->
-<section class="section light">
-    <h2>Our Courses</h2>
-    <div class="grid">
-        <div class="card">BA</div>
-        <div class="card">BSc</div>
-        <div class="card">BCom</div>
-        <div class="card">MA</div>
+    <section class="hero">
+        <img src="assets/images/campus.jpg" alt="College Campus">
+        <div class="hero-text">
+            <h2>Welcome to College Name</h2>
+            <p>Providing quality higher education since 19XX</p>
+        </div>
+    </section>
+
+    <section class="home-section">
+        <h2>About the Institution</h2>
+        <p>
+            Short introduction about the college will appear here.
+            Replace this text only. Do not change layout.
+        </p>
+        <a class="btn" href="about/history.html">Read More</a>
+    </section>
+
+    <section class="home-section">
+        <h2>Courses Offered</h2>
+        <p>Brief summary of academic programs.</p>
+        <a class="btn" href="courses/index.html">View Courses</a>
+    </section>
+
+    <section class="home-section">
+        <h2>Latest Notices</h2>
+        <p>Important announcements displayed here.</p>
+        <a class="btn" href="notices/index.html">All Notices</a>
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 College Name. All Rights Reserved.</p>
+        <p>Address • Phone • Email</p>
     </div>
-</section>
-
-<!-- Student Statistics -->
-<section class="section">
-    <h2>Student Strength</h2>
-    <div class="grid">
-        <div class="counter-box">
-            <h3 class="counter" data-target="1200">0</h3>
-            <p>Total Students</p>
-        </div>
-        <div class="counter-box">
-            <h3 class="counter" data-target="80">0</h3>
-            <p>Faculty Members</p>
-        </div>
-        <div class="counter-box">
-            <h3 class="counter" data-target="25">0</h3>
-            <p>Years of Excellence</p>
-        </div>
-    </div>
-</section>
-
-<!-- Gallery Preview -->
-<section class="section light">
-    <h2>Gallery</h2>
-    <div class="grid">
-        <div class="gallery-box"></div>
-        <div class="gallery-box"></div>
-        <div class="gallery-box"></div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <div class="footer-grid">
-        <div>
-            <h3>Contact Us</h3>
-            <p>Email: info@college.edu</p>
-            <p>Phone: +91-XXXXXXXXXX</p>
-        </div>
-
-        <div>
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="about/founder.html">Founder</a></li>
-                <li><a href="courses/index.html">Courses</a></li>
-                <li><a href="gallery/photo-gallery.html">Gallery</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <p class="copyright">
-        © 2026 XYZ Degree College | Managed by Anjuman Islamia Adara Trust
-    </p>
 </footer>
 
-<script src="js/main.js"></script>
+
+<!-- ================= MOBILE MENU SCRIPT (INLINE, NO FILE DEPENDENCY) ================= -->
+<script>
+document.getElementById("menuToggle").onclick = function() {
+    document.getElementById("mainNav").classList.toggle("active");
+};
+</script>
+
 </body>
 </html>
