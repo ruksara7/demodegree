@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>College Name | Official Website</title>
-
+<meta name="description" content="Official website of College Name. Admissions, courses, faculty, facilities and notices.">
 
 <link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
 
 </head>
 <body>
@@ -25,8 +26,12 @@
         </div>
 
         <button class="menu-toggle" id="menuToggle">☰</button>
+        <div class="menu-overlay" id="menuOverlay"></div>
 
         <nav class="main-nav" id="mainNav">
+
+            <span class="menu-close" id="menuClose">✕</span>
+
             <ul>
 
                 <li><a href="index.html">Home</a></li>
@@ -96,7 +101,7 @@
 </header>
 
 
-<!-- ================= MAIN CONTENT (CHANGE ONLY THIS IN OTHER PAGES) ================= -->
+<!-- ================= MAIN CONTENT ================= -->
 <main class="page-content">
 
     <section class="hero">
@@ -138,14 +143,6 @@
         <p>Address • Phone • Email</p>
     </div>
 </footer>
-
-
-<!-- ================= MOBILE MENU SCRIPT (INLINE, NO FILE DEPENDENCY) ================= -->
-<script>
-document.getElementById("menuToggle").onclick = function() {
-    document.getElementById("mainNav").classList.toggle("active");
-};
-</script>
 
 </body>
 </html>
