@@ -1,5 +1,5 @@
 const toggle = document.getElementById("menuToggle");
-const nav = document.getElementById("mainNav");
+const nav = document.getElementById("mainNav"); 
 
 if(toggle){
   toggle.onclick = () => nav.classList.toggle("active");
