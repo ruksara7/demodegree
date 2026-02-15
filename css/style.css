@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+/* ================= RESET ================= */
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
@@ -7,18 +7,20 @@ body{
   color:#222;
 }
 
-/* ===== CONTAINER ===== */
+/* ================= CONTAINER ================= */
 .container{
   max-width:1150px;
   margin:auto;
   padding:0 16px;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
 .site-header{
   background:#0b3d2e;
   color:#fff;
   border-bottom:4px solid #d4af37;
+  position:relative;
+  z-index:1000;
 }
 
 .header-flex{
@@ -35,20 +37,15 @@ body{
   gap:12px;
 }
 
-.logo img{
-  width:55px;
-  height:55px;
-  object-fit:contain;
-}
+.logo img{width:55px;height:55px;object-fit:contain;}
 
 .logo-text h1{font-size:20px;}
 .logo-text p{font-size:13px;opacity:.85}
 
-/* ===== NAVBAR ===== */
+/* ================= DESKTOP NAV ================= */
 .main-nav ul{
   list-style:none;
   display:flex;
-  flex-wrap:wrap;
   justify-content:center;
   background:#125c46;
 }
@@ -59,13 +56,12 @@ body{
   color:#fff;
   text-decoration:none;
   font-size:14px;
+  white-space:nowrap;
 }
 
-.main-nav a:hover{
-  background:#0f4c3a;
-}
+.main-nav a:hover{background:#0f4c3a}
 
-/* ===== DROPDOWN ===== */
+/* DROPDOWN DESKTOP */
 .dropdown{position:relative;}
 
 .dropdown ul{
@@ -75,28 +71,20 @@ body{
   background:#125c46;
   min-width:210px;
   display:none;
-  flex-direction:column;
-  z-index:1000;
+  z-index:999;
 }
 
-.dropdown ul li a{
+.dropdown:hover ul{display:block;}
+
+.dropdown ul a{
   padding:10px 14px;
   border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-.dropdown:hover ul{
-  display:block;
-}
+/* ================= HERO ================= */
+.page-content{padding:20px 0;}
 
-/* ===== HERO ===== */
-.page-content{
-  padding:20px 0;
-}
-
-.hero{
-  position:relative;
-  margin-bottom:30px;
-}
+.hero{position:relative;margin-bottom:30px;}
 
 .hero img{
   width:100%;
@@ -112,17 +100,11 @@ body{
   color:#fff;
   padding:12px 14px;
   max-width:90%;
+  pointer-events:none;
 }
 
-/* ===== HOME SECTIONS ===== */
-.home-section{
-  margin:40px auto;
-  max-width:900px;
-}
-
-.home-section h2{
-  margin-bottom:10px;
-}
+/* ================= SECTIONS ================= */
+.home-section{margin:40px auto;max-width:900px;}
 
 .btn{
   display:inline-block;
@@ -135,7 +117,7 @@ body{
 
 .btn:hover{background:#0f4c3a}
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 .site-footer{
   background:#0b3d2e;
   color:#fff;
@@ -144,7 +126,7 @@ body{
   margin-top:40px;
 }
 
-/* ===== HAMBURGER ===== */
+/* ================= HAMBURGER ================= */
 .menu-toggle{
   display:none;
   font-size:26px;
@@ -154,33 +136,80 @@ body{
   cursor:pointer;
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE DRAWER ================= */
 @media(max-width:900px){
 
+/* show hamburger */
 .menu-toggle{display:block;}
 
-.main-nav ul{
+/* hide top menu */
+.main-nav ul{display:block;background:none;}
+
+/* drawer panel */
+.main-nav{
+  position:fixed;
+  top:0;
+  left:-280px;
+  width:280px;
+  height:100%;
+  background:#ffffff;
+  overflow-y:auto;
+  transition:left .3s ease;
+  z-index:2000;
+  padding-top:60px;
+}
+
+/* open */
+.main-nav.active{left:0;}
+
+/* overlay */
+.menu-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
   display:none;
-  flex-direction:column;
-  align-items:stretch;
+  z-index:1500;
 }
 
-.main-nav.active ul{
-  display:flex;
+.menu-overlay.active{display:block;}
+
+/* close button */
+.menu-close{
+  position:absolute;
+  top:15px;
+  right:18px;
+  font-size:22px;
+  cursor:pointer;
+  color:#000;
 }
 
+/* vertical links */
+.main-nav a{
+  color:#333;
+  border-bottom:1px solid #eee;
+  padding:14px 18px;
+}
+
+/* dropdown mobile */
 .dropdown ul{
   position:static;
+  display:none;
+  background:#f4f4f4;
 }
 
-.dropdown.open ul{
-  display:block;
+.dropdown.open ul{display:block;}
+
+.dropdown > a::after{
+  content:"▾";
+  float:right;
 }
+
+.dropdown:hover ul{display:none;}
 
 .hero img{height:230px;}
 }
 
-/* SMALL PHONE */
+/* ================= SMALL PHONE ================= */
 @media(max-width:480px){
 .logo img{width:45px;height:45px;}
 .logo-text h1{font-size:17px;}
