@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Photo Gallery - My University</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.G. College - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Same topnav as index.html -->
-  <div class="topnav" id="myTopnav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html" class="active">Photo Gallery</a>
-    <a href="contact.html">Contact</a>
-    <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
-  </div>
-
-  <main>
-    <h1>Photo Gallery</h1>
-    <!-- Year selector for filtering -->
-    <label for="yearSelect">Select Year: </label>
-    <select id="yearSelect">
-      <option value="All">All</option>
-      <option value="2025">2025</option>
-      <option value="2024">2024</option>
-      <option value="2023">2023</option>
-      <!-- Add more years as needed -->
-    </select>
-
-    <!-- Gallery images -->
-    <div class="gallery">
-      <!-- Example figure; staff should copy this block for each photo, updating src and caption -->
-      <figure data-year="2025">
-        <img src="images/photos/2025/placement_cell.jpg" alt="Placement Cell Event">
-        <figcaption>Placement Cell 2025</figcaption>
-      </figure>
-      <figure data-year="2025">
-        <img src="images/photos/2025/sports_fest.jpg" alt="Annual Sports Festival">
-        <figcaption>Annual Sports Festival 2025</figcaption>
-      </figure>
-      <!-- Add more <figure> elements here, with correct data-year and image paths -->
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2026 My University. All rights reserved.</p>
-  </footer>
+    <nav class="navbar">
+        <div class="nav-brand">P.G. College</div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">घर</a></li>
+            <li class="dropdown">
+                <a href="about.html">About</a>
+                <ul class="dropdown-content">
+                    <li><a href="founder.html">Founder</a></li>
+                    <li><a href="history.html">History</a></li>
+                </ul>
+            </li>
+            <li><a href="vision-mission.html">Vision & Mission</a></li>
+            <li><a href="admin.html">We Value Services</a></li>
+            <li class="dropdown">
+                <a href="faculty.html">Faculty & Staff</a>
+                <ul class="dropdown-content">
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                </ul>
+            </li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="iqac.html">IQAC</a></li>
+            <li><a href="rti.html">RTI</a></li>
+        </ul>
+        <div class="hamburger">☰</div>
+    </nav>
+    <main>
+        <header class="hero">
+            <h1>Welcome to P.G. College</h1>
+            <p>Your premier institution for higher education in Varanasi.</p>
+        </header>
+        <section class="content">
+            <h2>Home Page Content</h2>
+            <p>Add your announcements, news, or slider here. This replicates the mobile-nav style from your screenshot. [web:2][web:10]</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
