@@ -1,49 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P.G. College - Home</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>College Test Home</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="nav-brand">P.G. College</div>
-        <ul class="nav-menu">
-            <li><a href="index.html" class="active">घर</a></li>
-            <li class="dropdown">
-                <a href="about.html">About</a>
-                <ul class="dropdown-content">
-                    <li><a href="founder.html">Founder</a></li>
-                    <li><a href="history.html">History</a></li>
-                </ul>
-            </li>
-            <li><a href="vision-mission.html">Vision & Mission</a></li>
-            <li><a href="admin.html">We Value Services</a></li>
-            <li class="dropdown">
-                <a href="faculty.html">Faculty & Staff</a>
-                <ul class="dropdown-content">
-                    <li><a href="academics.html">Academics</a></li>
-                    <li><a href="facilities.html">Facilities</a></li>
-                </ul>
-            </li>
-            <li><a href="library.html">Library</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="iqac.html">IQAC</a></li>
-            <li><a href="rti.html">RTI</a></li>
-        </ul>
-        <div class="hamburger">☰</div>
+
+<!-- TOP BAR -->
+<div class="header-top">
+  Affiliated College • NAAC Accredited • Varanasi
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container nav-inner">
+
+    <div class="logo">Anjuman College</div>
+
+    <nav class="menu">
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Courses</a>
+      <a href="#">Facilities</a>
+      <a href="#">Contact</a>
     </nav>
-    <main>
-        <header class="hero">
-            <h1>Welcome to P.G. College</h1>
-            <p>Your premier institution for higher education in Varanasi.</p>
-        </header>
-        <section class="content">
-            <h2>Home Page Content</h2>
-            <p>Add your announcements, news, or slider here. This replicates the mobile-nav style from your screenshot. [web:2][web:10]</p>
-        </section>
-    </main>
-    <script src="script.js"></script>
+
+    <div class="hamburger">☰</div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <nav class="mobile-menu">
+
+    <a href="#">Home</a>
+
+    <div class="has-sub">
+      <a href="#">About</a>
+      <div class="submenu">
+        <a href="#">Founder</a>
+        <a href="#">History</a>
+      </div>
+    </div>
+
+    <div class="has-sub">
+      <a href="#">Academics</a>
+      <div class="submenu">
+        <a href="#">UG Courses</a>
+        <a href="#">PG Courses</a>
+      </div>
+    </div>
+
+    <a href="#">Facilities</a>
+    <a href="#">Contact</a>
+
+  </nav>
+</header>
+
+<!-- BANNER -->
+<section class="page-banner">
+  <div class="container">
+    <h1>Welcome to Anjuman College</h1>
+  </div>
+</section>
+
+<!-- NOTICE -->
+<section class="section container">
+  <h2 class="section-title">Latest Notices</h2>
+  <ul class="notice">
+    <li><span>10 Apr:</span> Admission forms available</li>
+    <li><span>12 Apr:</span> Semester exams schedule released</li>
+    <li><span>15 Apr:</span> Scholarship list published</li>
+  </ul>
+</section>
+
+<!-- COUNTERS -->
+<section class="section container grid grid-3">
+  <div class="counter">
+    <h2>1500</h2>
+    <p>Students</p>
+  </div>
+  <div class="counter">
+    <h2>75</h2>
+    <p>Faculty</p>
+  </div>
+  <div class="counter">
+    <h2>35</h2>
+    <p>Years of Excellence</p>
+  </div>
+</section>
+
+<!-- STAFF -->
+<section class="section container">
+  <h2 class="section-title">Our Faculty</h2>
+
+  <div class="grid grid-3">
+
+    <div class="profile card">
+      <img src="https://via.placeholder.com/300x300">
+      <div class="profile-name">Dr. Ahmad Khan</div>
+      <div class="profile-role">Principal</div>
+    </div>
+
+    <div class="profile card">
+      <img src="https://via.placeholder.com/300x300">
+      <div class="profile-name">Prof. Salman</div>
+      <div class="profile-role">Physics</div>
+    </div>
+
+    <div class="profile card">
+      <img src="https://via.placeholder.com/300x300">
+      <div class="profile-name">Dr. Rahman</div>
+      <div class="profile-role">Commerce</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section container">
+  <h2 class="section-title">Campus Gallery</h2>
+  <div class="grid grid-4 gallery">
+    <img src="https://via.placeholder.com/400x300">
+    <img src="https://via.placeholder.com/400x300">
+    <img src="https://via.placeholder.com/400x300">
+    <img src="https://via.placeholder.com/400x300">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    © 2026 Anjuman College • All Rights Reserved
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
