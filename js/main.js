@@ -1,28 +1,23 @@
-// Toggle navigation on small screens (hamburger menu)【39†L1029-L1037】 
-function toggleNav() {
-  var nav = document.getElementById("myTopnav");
-  if (nav.className === "topnav") {
-    nav.className += " responsive";
-  } else {
-    nav.className = "topnav";
-  }
+/* MOBILE MENU */
+function toggleMenu(){
+ document.querySelector(".nav-menu").classList.toggle("active");
 }
 
-// Filter gallery by year selection
-document.addEventListener('DOMContentLoaded', function() {
-  var yearSelect = document.getElementById('yearSelect');
-  if (yearSelect) {
-    yearSelect.addEventListener('change', function() {
-      var selectedYear = this.value;
-      var figures = document.querySelectorAll('.gallery figure');
-      figures.forEach(fig => {
-        var figYear = fig.getAttribute('data-year');
-        if (selectedYear === 'All' || figYear === selectedYear) {
-          fig.style.display = 'block';
-        } else {
-          fig.style.display = 'none';
-        }
-      });
-    });
-  }
+/* DROPDOWN TAP SUPPORT */
+document.querySelectorAll(".dropdown > a").forEach(el=>{
+ el.addEventListener("click",function(e){
+
+   if(window.innerWidth < 900){
+     e.preventDefault();
+     this.parentElement.classList.toggle("open");
+   }
+
+ });
+});
+
+/* AUTO CLOSE MENU AFTER CLICK */
+document.querySelectorAll(".nav-menu a").forEach(link=>{
+ link.addEventListener("click",()=>{
+   document.querySelector(".nav-menu").classList.remove("active");
+ });
 });
